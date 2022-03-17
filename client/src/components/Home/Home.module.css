@@ -1,0 +1,33 @@
+.titleBar{
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.linkBtn {
+  margin: 0 0.5rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid var(--secondary-red);
+}
+
+.linkBtn:hover {
+  background-color: var(--secondary-red);
+  transition: 0.8s;
+}
+
+.filterBar {
+  justify-content: space-around;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-red);
+}
+
+.noPagination {
+  font-size: 0.8rem;
+  color: var(--primary-red);
+}
+
+.imgNotFound {
+  height: 400px;
+  width: auto;
+}

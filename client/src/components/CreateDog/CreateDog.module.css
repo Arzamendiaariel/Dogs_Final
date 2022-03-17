@@ -1,0 +1,50 @@
+.titleBar{
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--primary-red);
+}
+
+.linkBtn {
+  margin: 0 0.5rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid var(--secondary-red);
+}
+
+.linkBtn:hover {
+  background-color: var(--secondary-red);
+  transition: 0.8s;
+}
+
+.createDogFlex {
+  flex-direction: column;
+}
+
+.submitBtn {
+  background-color: var(--primary-green);
+}
+
+.submitBtn:disabled {
+  cursor: not-allowed;
+}
+
+.temperamentsGrid {
+  align-items: flex-start;
+}
+
+.temperamentCard {
+  background-color: var(--card-bg-color);
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.temperamentCardBtn {
+  cursor: pointer;
+  border: none;
+  background-color: var(--primary-red);
+  padding: 0 0.2rem;
+  border-radius: 0.2rem;
+  margin: 0 0.4rem;
+}

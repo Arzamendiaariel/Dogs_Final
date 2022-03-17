@@ -1,0 +1,16 @@
+.nav {
+  margin: 2rem 0;
+}
+
+.paginationBtn {
+  border: none;
+  margin: 0 0.3rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.2rem;
+  background-color: var(--mint);
+  cursor: pointer;
+}
+
+.paginationBtn:hover {
+  background-color: var(--primary-green);
+}
