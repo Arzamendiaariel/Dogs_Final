@@ -5,9 +5,9 @@
 .searchBtn {
   border: none;
   padding: 0.2rem 0.3rem;
-  color: var(--primary-bg-color);
-  background-color: var(--mint);
-  border-radius: 0.2rem;
+  color: rgb(95, 2, 2);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 7px;
   font-size: 1rem;
   cursor: pointer;
 }

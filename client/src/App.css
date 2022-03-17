@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500;600&family=Heebo:wght@200;300&display=swap');
 
 :root {
-  --primary-bg-color: #09090C;
-  --mint: #B1FBCF;
-  --pink: #FBD7C5;
-  --primary-red: #EA3449;
-  --secondary-red: #DE172E;
-  --primary-green: #09AE4B;
-  --secondary-green: #0F956A;
-  --card-bg-color: #1D0C19;
+  --primary-bg-color: #09090c;
+  --mint: #b1fbcf;
+  --pink: #fbd7c5;
+  --primary-red: #ea3449;
+  --secondary-red: #de172e;
+  --primary-green: #09ae4b;
+  --secondary-green: #0f956a;
+  --card-bg-color: rgba(255, 255, 255, 0.5);
   --alegreya-font: 'Alegreya', serif;
   --heebo-font: 'Heebo', sans-serif;
 }
@@ -19,10 +19,21 @@
   padding: 0;
 }
 
+/* https://edition.cnn.com/interactive/2021/12/world/two-dogs-catching-treats-cnnphotos/media/images/s_7F29DB66001B627FB4116B1739A280DEF61638AA9E0A9DBFC611A65816DB3720_1639757371977_01-191013_Stargardt_Fero_54-1.jpg  */
+/* https://cdn.iview.abc.net.au/thumbs/1800/zw/ZW2440A_6062aa7774320.jpg */
+
 body {
   background-color: #000;
-  color: #fff;
+  color: rgb(95, 2, 2);
   font-family: var(--heebo-font);
+
+  background-image: url(./components/Home/images/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
 }
 
 ul {
@@ -39,28 +50,27 @@ img {
   /* position: absolute; */
 }
 
-input[type="text"],
-input[type="search"] {
+input[type='text'],
+input[type='search'] {
   background-color: var(--card-bg-color);
   border: 0;
-  border-bottom: 1px solid var(--secondary-green);
+  border-radius: 7px;
   font-family: var(--heebo-font);
-  color: #fff;
+  color: rgb(95, 2, 2);
   font-size: 1rem;
-  caret-color: var(--secondary-green);
+  caret-color: rgb(95, 2, 2);
 }
 
-input[type="text"]:focus,
-input[type="search"]:focus {
+input[type='text']:focus,
+input[type='search']:focus {
   outline: none;
-  border-bottom: 1px solid var(--mint);
 }
 
 select {
   background-color: #251825;
   border: none;
   outline: none;
-  color:var(--mint);
+  color: var(--mint);
   font-size: 1rem;
   font-family: var(--heebo-font);
 }
@@ -117,10 +127,19 @@ select {
   background-color: var(--card-bg-color);
   color: #fff;
   width: 400px;
+
+  border-radius: 0.5rem;
+  /* background-color: rgba(255, 255, 255, 0.6); */
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .carta:hover {
   box-shadow: 3px 3px 27px 0px rgba(234, 52, 73, 0.75);
+
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.4);
+  transform: scale(102%);
+  transition: 0.25s;
 }
 
 .bone {
@@ -135,12 +154,12 @@ select {
   }
   to {
     transform: rotate(360deg);
-  }  
+  }
 }
 
 .cardLink {
   text-decoration: none;
-  color: #fff;
+  color: rgb(202, 58, 58);
 }
 
 .centrar-texto {
