@@ -13,16 +13,13 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
-      </Routes>
-
-      <NavBar>
-        <Routes>
+        <Route element={<NavBar />}>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/dog" element={<CreateDog />}></Route>
           **<Route path="home/dogs/:id" element={<DogDetails />}></Route>
           <Route path="*" element={<NotFound />}></Route>
-        </Routes>
-      </NavBar>
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }

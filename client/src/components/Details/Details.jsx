@@ -24,15 +24,15 @@ export default function DogDetails() {
           </div>
           <div>
             <h4 className="special-heading">Name:</h4>
-            <p>{myDog.name}</p>
+            <p className="special-heading">{myDog.name}</p>
             <h4 className="special-heading">Weight:</h4>
-            <p>{myDog.weight} kgs</p>
+            <p className="special-heading">{myDog.weight} kgs</p>
             <h4 className="special-heading">Height:</h4>
-            <p>{myDog.height} cms</p>
+            <p className="special-heading">{myDog.height} cms</p>
             <h4 className="special-heading">Life Span:</h4>
-            <p>{myDog.life_span} years</p>
+            <p className="special-heading">{myDog.life_span} years</p>
             <h4 className="special-heading">Temperament:</h4>
-            <p>{myDog.temperament}</p>
+            <p className="special-heading">{myDog.temperament}</p>
           </div>
         </div>
       </div>

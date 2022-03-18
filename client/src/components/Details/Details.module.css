@@ -1,4 +1,4 @@
-.titleBar{
+.titleBar {
   justify-content: space-between;
   padding: 1rem 2rem;
   border-bottom: 2px solid var(--primary-red);
@@ -11,6 +11,13 @@
   border: 2px solid var(--secondary-red);
 }
 
-.detailsContainer{
+.detailsContainer {
   margin-top: 3rem;
+  border: 2px solid var(--secondary-red);
+  background-color: var(--card-bg-color);
+  color: #fff;
+  width: 900px;
+  height: 550px;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3);
 }

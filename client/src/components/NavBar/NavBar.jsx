@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import styles from './NavBar.module.css';
 
-const NavBar = ({ children }) => {
+const NavBar = () => {
   return (
     <div>
       <nav className={`${styles.titleBar} flex`}>
@@ -16,7 +16,7 @@ const NavBar = ({ children }) => {
           </Link>
         </div>
       </nav>
-      {children}
+      <Outlet />
     </div>
   );
 };

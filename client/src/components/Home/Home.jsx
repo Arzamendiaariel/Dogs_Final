@@ -25,9 +25,9 @@ export default function Home() {
   // me trae desde el reducer el estado dogs donde están todos los perros
   const allTemperaments = useSelector((state) => state.temperaments);
 
-  // Pagination
+  //paginación
   const [currentPage, setCurrentPage] = useState(1);
-  // here we are setting a state with our first current page and get setState thta controls the page number
+  // steamos un estado con nuestra primera pagina y llamamos un setState quq econtrola el número de página
   const [dogsPerPage] = useState(8);
   // const [temperamentsSelected, setTemperamentsSelected] = useState([]);
   const [orderByName, setOrderByName] = useState();
@@ -127,7 +127,7 @@ export default function Home() {
             <option value="default" disabled hidden>
               Select Source
             </option>
-            <option value="all">All</option>
+            <option value="all">ALL</option>
             <option value="onlyFromApi">API</option>
             <option value="onlyFromDb">DB</option>
           </select>

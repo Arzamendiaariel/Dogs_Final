@@ -1,11 +1,3 @@
-// import { combineReducers } from "redux";
-// import { temperamentsReducer } from "./temperamentsReducer";
-
-// const reducers = combineReducers({
-//   allTemperaments: temperamentsReducer
-// });
-
-// export default reducers;
 
 import { ActionTypes } from "../constants";
 

@@ -113,7 +113,7 @@ export function postDog(payload) {
         type: ActionTypes.POST_DOG,
         payload: json.data
       });
-      // return json;
+
     } catch(err) {
       console.log(err);
     }

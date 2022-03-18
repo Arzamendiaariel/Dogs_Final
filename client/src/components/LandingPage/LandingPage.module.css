@@ -1,47 +1,40 @@
-.dogBg {
-  padding: 5rem 0;
-  padding-left: 4rem;
-  height: 100vh;
-}
-
-.heading {
-  font-size: 3.5rem;
-}
-
-.imgContainer {
-  height: 100%;
+.cointainer {
+  display: flex;
   position: relative;
+  justify-content: center;
+  align-content: center;
 }
 
-.imgContainer::before {
+.bgVideo {
   position: absolute;
-  top: -5%;
-  right: -12%;
   width: 100%;
   height: 100%;
-  border: 4px solid var(--secondary-red);
-  content: '';
+  z-index: -999;
+  object-fit: cover;
 }
 
-.landingPageBtn {
-  background-color: transparent;
-  color: #fff;
-  font-size: 1rem;
-  border: 2px solid var(--secondary-red);
+.enterBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  width: 20rem;
+  height: 2.5rem;
 }
 
-.landingPageBtn:hover {
-  background-color: var(--secondary-red);
-  transition: .8s ease;
-}
-
-.landingPageDescription {
-  padding-left: 3rem;
-  font-size: 0.8rem;
-  color: var(--mint);
-}
-
-.dogImg {
-  max-width: 100%;
-  height: 100%;
+.enterBtn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: larger;
+  transition: 0.25s;
+  width: 8rem;
+  height: 8rem;
 }
