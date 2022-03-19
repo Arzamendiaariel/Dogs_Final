@@ -18,23 +18,32 @@
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.5);
+
   box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
-  border: none;
+
   cursor: pointer;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.6);
   width: 20rem;
   height: 2.5rem;
+
+  margin: 0 0.5rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid var(--primary-red);
+  border-radius: 5px;
+  font-size: large;
 }
 
 .enterBtn:hover {
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   color: rgba(0, 0, 0, 0.6);
   font-size: larger;
-  transition: 0.25s;
-  width: 8rem;
-  height: 8rem;
+
+  width: 21rem;
+  height: 4rem;
+
+  background-color: var(--secondary-red);
+  transition: 0.8s;
 }

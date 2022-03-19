@@ -4,58 +4,74 @@ import { useDispatch, useSelector } from 'react-redux';
 import { postDog, getTemperaments } from '../../redux/actions';
 import styles from './CreateDog.module.css';
 
+//función para validar  lo que el cliente escribe
 function inputValidator(input) {
+  //objeto auxiliar donde pongo errores
   let inputError = {};
   const inputProps = ['name', 'min_height', 'max_height', 'min_weight', 'max_weight', 'life_span'];
   for (var i = 0; i < inputProps.length; i++) {
     if (!input[inputProps[i]]) {
-      inputError[inputProps[i]] = `${inputProps[i]} is required`;
+      inputError[inputProps[i]] = `${inputProps[i]} is required`; //le pido que me  ponga si o si es imput para poder avanzar
     }
   }
-
+  //no permito que haya imputs vacios; ante la nada renderizo  que debe entrar un valor
+  //cada error es una propiedad del objeto input error
   if (input.name.trim() === '') {
+    //string vacio error
     inputError.name = 'Must enter a name';
   }
   if (isNaN(Number(input.min_height))) {
+    // Si no es numero tiro error
     inputError.min_height = 'min_height should be a number';
   }
   if (isNaN(Number(input.max_height))) {
+    //si no es numero tiro error
     inputError.max_height = 'max_height should be a number';
   }
   if (isNaN(Number(input.min_weight))) {
+    //si no es numero tiro eror
     inputError.min_weight = 'min_weight should be a number';
   }
   if (isNaN(Number(input.max_weight))) {
+    //si no es numero tiro error
     inputError.max_weight = 'max_weight should be a number';
   }
   if (input.min_height && input.min_height <= 0) {
+    //si la altura es cero o menos error
     inputError.min_height = 'Min height should be more than zero';
   }
   if (input.max_height && input.max_height > 110) {
+    //primero valido si tiene altura maxima si el dinosaurio mide mas de un metro diez tiero error
     inputError.max_height =
       "Make sure it's a dog you are trying to add becasue max-height should be below 110cms";
   }
   if (Number(input.min_height) > Number(input.max_height)) {
+    //comparo la altura minima y maxima para que no ponga algo icoherente
     inputError.min_height = 'Min height should be smaller than max height';
   }
   if (input.min_weight && input.min_weight <= 0) {
+    //valido si tiene altura maxima y despues
     inputError.min_weight = 'Min weight should be more than zero';
   }
   if (input.max_weight && input.max_weight > 110) {
+    //chequeo el peso maximo que pone para que no sea excesivo
     inputError.max_weight =
       "Make sure it's a dog you are trying to add becasue max-weight should be below 100kgs";
   }
   if (Number(input.min_weight) > Number(input.max_weight)) {
+    //vuelvo a comparar las alturas maximas y minimas para que no se prdozca la incoherencia
     inputError.min_weight = 'Min weight should be smaller than max weight';
   }
   if (input.life_span && input.life_span < 0) {
+    //valido que exista la esperanza de vida y que sea mayor a cero
     inputError.life_span = 'Life span should be a positive number of years';
   }
   if (input.life_span > 23) {
+    //chequeo que no ponga al matusalem de los perros
     inputError.life_span = 'Are you sure dogs live that long?';
   }
 
-  return inputError;
+  return inputError; //retorno el objeto con las propiedades con errores, si no hay errores esta vacio
 }
 
 export default function CreateDog() {
