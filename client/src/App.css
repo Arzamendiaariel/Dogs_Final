@@ -106,10 +106,13 @@ select {
 }
 
 .contenedor {
-  max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
   overflow: auto;
-  padding: 0 40px;
+  padding-top: 5px;
+  position: static;
+  display: flex;
+  justify-content: space-around;
 }
 
 .grilla {
@@ -126,7 +129,7 @@ select {
 }
 
 .carta {
-  margin: 10px;
+  margin: 30px;
   border: 2px solid var(--secondary-red);
   background-color: var(--card-bg-color);
   color: #fff;

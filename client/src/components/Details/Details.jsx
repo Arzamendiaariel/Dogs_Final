@@ -20,19 +20,19 @@ export default function DogDetails() {
       <div className={`contenedor ${styles.detailsContainer}`}>
         <div className="grilla">
           <div>
-            <img src={myDog.image} alt="" />
+            <img className={styles.image} src={myDog.image} alt="perrito" />
           </div>
           <div>
-            <h4 className="special-heading">Name:</h4>
-            <p className="special-heading">{myDog.name}</p>
-            <h4 className="special-heading">Weight:</h4>
-            <p className="special-heading">{myDog.weight} kgs</p>
-            <h4 className="special-heading">Height:</h4>
-            <p className="special-heading">{myDog.height} cms</p>
-            <h4 className="special-heading">Life Span:</h4>
-            <p className="special-heading">{myDog.life_span} years</p>
-            <h4 className="special-heading">Temperament:</h4>
-            <p className="special-heading">{myDog.temperament}</p>
+            <h4 className={styles.titulo}>Name:</h4>
+            <p className={styles.data}>{myDog.name}</p>
+            <h4 className={styles.titulo}>Weight:</h4>
+            <p className={styles.data}>{myDog.weight} kgs</p>
+            <h4 className={styles.titulo}>Height:</h4>
+            <p className={styles.data}>{myDog.height} cms</p>
+            <h4 className={styles.titulo}>Life Span:</h4>
+            <p className={styles.data}>{myDog.life_span} years</p>
+            <h4 className={styles.titulo}>Temperament:</h4>
+            <p className={styles.data}>{myDog.temperament}</p>
           </div>
         </div>
       </div>

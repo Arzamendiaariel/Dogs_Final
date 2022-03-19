@@ -92,7 +92,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className={`${styles.filterBar} flex`}>
+      <header className={`${styles.filterBar} flex`}>
         <div>
           <select onChange={(e) => handleSortByName(e)} defaultValue="default">
             <option value="default" disabled hidden>
@@ -135,8 +135,9 @@ export default function Home() {
         <div>
           <SearchBar />
         </div>
-      </div>
-      <div className="contenedor">
+      </header>
+
+      <body className="contenedor">
         {!allDogs.length && !allDogsCopy.length && (
           <div className="centrar-texto">
             <img src={bone} className="bone" alt="" />
@@ -164,7 +165,7 @@ export default function Home() {
               );
             })}
         </div>
-      </div>
+      </body>
 
       <div>
         {allDogs.length > 0 && (
