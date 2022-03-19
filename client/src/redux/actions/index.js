@@ -1,6 +1,8 @@
 import { ActionTypes } from '../constants';
 import axios from 'axios';
 
+//
+
 export function getDogs() {
   //acción para traer todos los perros
 
@@ -122,7 +124,8 @@ export function filterDogsByTemperament(payload) {
 }
 
 export function filterDogsBySource(payload) {
-  //acciones para mandar a llamar el filtrado por
+  //acciones para mandar a llamar el filtrado por fuente, la especificidad de cada fuete esta dada en el reducer
+  //por lo que manda el handle filter by source definido ahi
   return {
     type: ActionTypes.FILTER_DOGS_BY_SOURCE,
     payload,
@@ -131,6 +134,7 @@ export function filterDogsBySource(payload) {
 
 export function sortByName(payload) {
   //acciones para ordenar los perros por nombre
+  //aca pasa algo similar al filtrado por fuete pero con los nombre,s la especificidad esta definida en las funciones del home
   return {
     type: ActionTypes.ORDER_BY_NAME,
     payload,
