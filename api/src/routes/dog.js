@@ -1,10 +1,13 @@
-const { Dog, Temperament } = require('../db');
+const { Dog } = require('../db');
 const { Router } = require('express');
 const router = Router();
 
+//creo la ruta de posteo de un nuevo perro
+
 router.post('/', async (req, res) => {
   const { name, height, weight, life_span, temperament } = req.body;
-
+  //como asumo que no van a poner foto no les doy la opción al cliente de hacerlo y genero la siguiente operación
+  //tengo una lista de fotos chistosas de perros que, de manera aleatoria se cargar a la raza creada
   var images = [
     'https://media.istockphoto.com/photos/portrait-of-a-funny-dog-jack-russell-terrier-in-sunglasses-behind-the-picture-id1180219878?k=20&m=1180219878&s=612x612&w=0&h=NB14R3M-_7K7q6KCa6OqwdHaKjxk4MTStFHI1vI9CZI=',
     'https://media.istockphoto.com/photos/dog-watching-tv-on-the-couch-picture-id680810342?k=20&m=680810342&s=612x612&w=0&h=wQVeNcnq0CIqpGK88zA-pqmzbyK_6diiHR7kAq5PbxQ=',
@@ -21,6 +24,7 @@ router.post('/', async (req, res) => {
   var randomNum = Math.floor(Math.random() * 11);
 
   try {
+    //creo una raza nueva con .create de sequelize
     const newDog = await Dog.create({
       name,
       height,
@@ -28,7 +32,7 @@ router.post('/', async (req, res) => {
       life_span,
       image: images[randomNum],
     });
-
+    //genero la vinculación de la tabla de razas con la tabla de temperamentos
     newDog.addTemperaments(temperament);
 
     return res.json(newDog);

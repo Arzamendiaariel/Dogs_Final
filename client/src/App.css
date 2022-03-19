@@ -112,7 +112,8 @@ select {
   padding-top: 5px;
   position: static;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .grilla {

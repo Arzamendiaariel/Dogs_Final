@@ -1,6 +1,7 @@
 .titleBar {
   justify-content: space-between;
   padding: 1rem 2rem;
+  text-shadow: 1px 1px 2px grey;
 }
 
 .linkBtn {
@@ -10,6 +11,8 @@
   border: 2px solid var(--primary-red);
   border-radius: 5px;
   font-size: large;
+  text-shadow: 1px 1px 2px rgb(2, 0, 0);
+  font-weight: 500;
 }
 
 .linkBtn:hover {
