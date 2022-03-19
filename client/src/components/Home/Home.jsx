@@ -136,14 +136,15 @@ export default function Home() {
           <SearchBar />
         </div>
       </header>
-
-      <body className="contenedor">
+      <section>
         {!allDogs.length && !allDogsCopy.length && (
           <div className="centrar-texto">
             <img src={bone} className="bone" alt="" />
-            <p>Loading...</p>
+            <p className="special-heading">Loading...</p>
           </div>
         )}
+      </section>
+      <body className="contenedor">
         {!allDogs.length && allDogsCopy.length > 0 && (
           <div className="centrar-texto">
             <h2>No Dogs Found</h2>

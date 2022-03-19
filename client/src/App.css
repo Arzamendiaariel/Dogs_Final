@@ -60,12 +60,14 @@ input[type='search'] {
   font-size: 1rem;
   caret-color: rgb(95, 2, 2);
   margin-left: 5px;
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 input[type='text']:focus,
 input[type='search']:focus {
   outline: none;
   border-bottom: 1px solid var(--mint);
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 select {
@@ -77,6 +79,7 @@ select {
   font-size: 20px;
   font-family: var(--heebo-font);
   font-weight: 600;
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .flex {
@@ -151,7 +154,7 @@ select {
 }
 
 .bone {
-  height: 80px;
+  height: 120px;
   width: auto;
   animation: spinning 5s infinite linear;
 }
@@ -172,6 +175,7 @@ select {
 
 .centrar-texto {
   text-align: center;
+  align-items: flex-start;
 }
 
 .boton {
@@ -184,6 +188,8 @@ select {
 .special-heading {
   font-family: var(--alegreya-font);
   font-size: xx-large;
+  color: whitesmoke;
+  text-shadow: 2px 2px 2px rgb(2, 0, 0);
 }
 
 .altura-100 {
@@ -197,4 +203,5 @@ select {
 .my-1 {
   margin: 1rem 0;
   padding-left: 3cm;
+  font-weight: bold;
 }

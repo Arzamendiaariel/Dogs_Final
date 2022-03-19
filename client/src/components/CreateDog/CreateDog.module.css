@@ -37,6 +37,9 @@
   background-color: var(--secondary-red);
   color: white;
   cursor: not-allowed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .submitBtn:disabled {
