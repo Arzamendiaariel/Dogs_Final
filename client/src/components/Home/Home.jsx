@@ -33,7 +33,7 @@ export default function Home() {
   const [orderByName, setOrderByName] = useState();
   const [orderByWeight, setOrderByWeight] = useState();
 
-  const indexOfLastDogOnPage = currentPage * dogsPerPage;
+  const indexOfLastDogOnPage = currentPage * dogsPerPage; //es lo mismo que decir, 1*8
   const indexOfFirstDogOnPage = indexOfLastDogOnPage - dogsPerPage;
 
   const currentPageDogs = allDogs.slice(indexOfFirstDogOnPage, indexOfLastDogOnPage);
@@ -62,22 +62,22 @@ export default function Home() {
 
   function handleFilterByTemperaments(e) {
     e.preventDefault();
-    dispatch(filterDogsByTemperament(e.target.value));
+    dispatch(filterDogsByTemperament(e.target.value)); //aca el value va a estar dado por las opciones que se desprenden del map
   }
 
   // Filter By Source
 
   function handleFilterBySource(e) {
     e.preventDefault();
-    dispatch(filterDogsBySource(e.target.value));
+    dispatch(filterDogsBySource(e.target.value)); //el value para el dispatch va a ser all, db o api
   }
 
   // Sort by Name
 
   function handleSortByName(e) {
     e.preventDefault();
-    dispatch(sortByName(e.target.value));
-    setCurrentPage(1);
+    dispatch(sortByName(e.target.value)); //aca los values estan dados por las options "nameAscendant"/"nameDescendant"
+    setCurrentPage(1); //tengo que volcer a la pagina uno
     setOrderByName(`${e.target.value}`);
   }
 

@@ -134,7 +134,14 @@ select {
   align-items: center;
   height: 100%;
 }
-
+.grilla-detalles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 .grilla-3 {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -145,6 +152,7 @@ select {
   background-color: var(--card-bg-color);
   color: #fff;
   width: 400px;
+
   padding: 10px;
 
   border-radius: 0.5rem;

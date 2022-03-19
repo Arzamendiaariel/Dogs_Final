@@ -18,7 +18,7 @@ export default function DogDetails() {
   return (
     <div>
       <div className={`contenedor ${styles.detailsContainer}`}>
-        <div className="grilla">
+        <div className="grilla-detalles">
           <div>
             <img className={styles.image} src={myDog.image} alt="perrito" />
           </div>
