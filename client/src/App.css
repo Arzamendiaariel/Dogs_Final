@@ -176,6 +176,8 @@ select {
 .centrar-texto {
   text-align: center;
   align-items: flex-start;
+  color: whitesmoke;
+  text-shadow: 2px 2px 2px rgb(2, 0, 0);
 }
 
 .boton {

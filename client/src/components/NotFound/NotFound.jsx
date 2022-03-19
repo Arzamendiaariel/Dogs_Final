@@ -6,7 +6,7 @@ import notFoundImg from './images/notFound.png';
 export default function NotFound() {
   return (
     <div>
-      <div className="contenedor centrar-texto">
+      <div className=" centrar-texto">
         <h2>Ruta no encontrada</h2>
         <img className={styles.img} src={notFoundImg} alt="" />
       </div>

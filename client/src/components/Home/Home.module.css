@@ -19,4 +19,6 @@
 .imgNotFound {
   height: 400px;
   width: auto;
+  border-radius: 10px;
+  margin-top: 15px;
 }
