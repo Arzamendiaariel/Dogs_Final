@@ -53,10 +53,10 @@ export default function Home() {
   }, [dispatch]);
 
   // esto refresca la pagina
-  function handleClick(e) {
-    e.preventDefault();
-    dispatch(getDogs());
-  }
+  // function handleClick(e) {
+  //   e.preventDefault();
+  //   dispatch(getDogs());
+  // }
 
   // Filter By Temperaments
 
@@ -116,6 +116,7 @@ export default function Home() {
             <option value="default" disabled hidden>
               Select Temperament
             </option>
+            <option value="all">All Temperaments</option>
             {allTemperaments &&
               allTemperaments.map((temperament) => (
                 <option key={temperament.id}>{temperament.name}</option>
