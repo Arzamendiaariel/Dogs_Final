@@ -36,10 +36,11 @@
   border-radius: 5px;
   background-color: var(--secondary-red);
   color: white;
-  cursor: not-allowed;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .submitBtn:disabled {
@@ -47,7 +48,7 @@
   color: #fff;
   border: 2px solid var(--primary-red);
   border-radius: 5px;
-  cursor: pointer;
+  cursor: not-allowed;
 }
 
 .temperamentsGrid {
