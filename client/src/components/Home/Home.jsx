@@ -21,19 +21,23 @@ export default function Home() {
 
   const allDogs = useSelector((state) => state.dogs);
   const allDogsCopy = useSelector((state) => state.allDogs);
-  // este hook es lo mismo que usar el mapStateToProps. Con useSelector traeme en esa constante todo lo que esta en el estado de dogs
-  // me trae desde el reducer el estado dogs donde están todos los perros
+
   const allTemperaments = useSelector((state) => state.temperaments);
+
+
+
+
+
 
   //paginación
   const [currentPage, setCurrentPage] = useState(1);
   // steamos un estado con nuestra primera pagina y llamamos un setState quq econtrola el número de página
   const [dogsPerPage] = useState(8);
-  // const [temperamentsSelected, setTemperamentsSelected] = useState([]);
+
   const [orderByName, setOrderByName] = useState();
   const [orderByWeight, setOrderByWeight] = useState();
 
-  const indexOfLastDogOnPage = currentPage * dogsPerPage; //es lo mismo que decir, 1*8
+  const indexOfLastDogOnPage = currentPage * dogsPerPage;
   const indexOfFirstDogOnPage = indexOfLastDogOnPage - dogsPerPage;
 
   const currentPageDogs = allDogs.slice(indexOfFirstDogOnPage, indexOfLastDogOnPage);
@@ -42,42 +46,42 @@ export default function Home() {
     setCurrentPage(pageNumber);
   };
 
+
+
+
+
+
+
+  
   useEffect(() => {
     dispatch(getDogs());
   }, [dispatch]);
-  // el segundo argumento es para evitar que se genere un loop infinito de useEffect
-  // el segundo argumento puede ser un array vacio pero cuando ese use effect depende de la funcion dispatch es como decirle que siempre y cuando tengas ese dispatch, ejecutalo
 
   useEffect(() => {
     dispatch(getTemperaments());
   }, [dispatch]);
 
-  // esto refresca la pagina
-  // function handleClick(e) {
-  //   e.preventDefault();
-  //   dispatch(getDogs());
-  // }
-
   // Filter By Temperaments
 
   function handleFilterByTemperaments(e) {
     e.preventDefault();
-    dispatch(filterDogsByTemperament(e.target.value)); //aca el value va a estar dado por las opciones que se desprenden del map
+    dispatch(filterDogsByTemperament(e.target.value));
+    setCurrentPage(1);
   }
 
   // Filter By Source
 
   function handleFilterBySource(e) {
     e.preventDefault();
-    dispatch(filterDogsBySource(e.target.value)); //el value para el dispatch va a ser all, db o api
+    dispatch(filterDogsBySource(e.target.value));
   }
 
   // Sort by Name
 
   function handleSortByName(e) {
     e.preventDefault();
-    dispatch(sortByName(e.target.value)); //aca los values estan dados por las options "nameAscendant"/"nameDescendant"
-    setCurrentPage(1); //tengo que volcer a la pagina uno
+    dispatch(sortByName(e.target.value));
+    setCurrentPage(1); //tengo que volver a la pagina uno
     setOrderByName(`${e.target.value}`);
   }
 
@@ -175,6 +179,7 @@ export default function Home() {
             totalAmountOfDogs={allDogs.length}
             dogsPerPage={dogsPerPage}
             paginationChanger={paginationChanger}
+            currentPage={currentPage}
           />
         )}
         {!allDogs.length && allDogsCopy.length > 0 && (

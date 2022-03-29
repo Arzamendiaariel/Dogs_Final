@@ -14,33 +14,31 @@ function rootReducer(state = initialState, action) {
   const allDogs = state.allDogs;
 
   switch (action.type) {
-    case ActionTypes.GET_DOGS: //traia a toda la info de la api
+    case ActionTypes.GET_DOGS:
       return {
         ...state,
         dogs: action.payload,
         allDogs: action.payload, //traigo 2 veces los perros para luego en el home poder hacer mas sencillo el "loading..."
       };
-    case ActionTypes.DOG_DETAILS: //trae solo la info por id
+    case ActionTypes.DOG_DETAILS:
       return {
         ...state,
         dogDetails: action.payload,
       };
-    case ActionTypes.GET_DOGS_BY_NAME: //trae la info por nombre de raza por query
+    case ActionTypes.GET_DOGS_BY_NAME:
       return {
         ...state,
         dogs: action.payload,
       };
-    case ActionTypes.GET_TEMPERAMENTS: //trae los temperamentos del bakend
+    case ActionTypes.GET_TEMPERAMENTS:
       return {
         ...state,
         temperaments: action.payload,
       };
-    case ActionTypes.POST_DOG: //posteo hacia el backend
+    case ActionTypes.POST_DOG:
       return state;
     case ActionTypes.FILTER_BY_TEMPERAMENT:
-      //aca hago distinción entre los tipos de payload que le envio desde el Home donde tengo el selector
       if (action.payload === 'all') {
-        //trae todos los perros no filtro nada
         return {
           ...state,
           dogs: allDogs,

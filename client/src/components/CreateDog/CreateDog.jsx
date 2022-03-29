@@ -17,7 +17,6 @@ function inputValidator(input) {
   //no permito que haya imputs vacios; ante la nada renderizo  que debe entrar un valor
   //cada error es una propiedad del objeto input error
   if (input.name.trim() === '') {
-    //string vacio error
     inputError.name = 'Must enter a name';
   }
   if (isNaN(Number(input.min_height))) {
@@ -250,6 +249,9 @@ export default function CreateDog() {
               </div>
               {inputError.life_span && <p>{inputError.life_span}</p>}
             </div>
+
+
+            
             <div className={`grilla my-1 ${styles.temperamentsGrid}`}>
               <div>
                 <div>
